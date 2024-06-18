@@ -1,0 +1,9 @@
+print ("Temperaturkonverteraren")
+print("1. Celsius till Fahrenheit")
+print("2. Fahrenheit till Celsius")
+print("3. Celsius till Kelvin")
+print("4. Kelvin till Celsius")
+print("5. Fahrenheit till Kelvin")
+print("6. Kelvin till Fahrenheit")
+
+input = "Vilken konvertering vill du göra?"
