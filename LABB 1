@@ -20,34 +20,34 @@ print("Celcius: ", t)
 # 6. Kelvin till Fahrenheit
 
 # 1. Celsius till Fahrenheit
-def Celsius_to_Fahrenheit(C_T_F):
-    C_T_F = (t * 9/5) + 32
-    return C_T_F
+def celsius_to_fahrenheit(celcius):
+    fahrenheit = (celcius * 9/5) + 32
+    return fahrenheit
     
 # 2. Fahrenheit till Celsius
-def Fahrenheit_to_Celsius(F_T_C):
-    F_T_C = t + 273.15
-    return F_T_C
+def Fahrenheit_to_Celsius(fahrenheit):
+    fahrenheit = celcius + 273.15
+    return fahrenheit
 
 # 3. Celsius till Kelvin
-def Celsius_to_Kelvin(C_T_K):
-   C_T_K = t - 273.15
-   return C_T_K
+def Celsius_to_Kelvin(celcius):
+   celcius = kelvin - 273.15
+   return celcius
     
 # 4. Kelvin till Celsius
-def Kelvin_to_Celsius(K_T_C):
-    K_T_C = t - 273.15
-    return K_T_C
-    
+def Kelvin_to_Celsius(kelvin):
+    kelvin = celcius - 273.15
+    return kelvin
+
 # 5. Fahrenheit till Kelvin
-def Fahrenheit_to_Kelvin(F_T_K):
-    F_T_K = (t - 32) * 5/9 + 273.15
-    return F_T_K
+def Fahrenheit_to_Kelvin(fahrenheit):
+    fahrenheit = (kelvin - 32) * 5/9 + 273.15
+    return fahrenheit
 
 # 6. Kelvin till Fahrenheit
-def Kelvin_to_Fahrenkeit(K_T_F):
-    K_T_F = (t - 273.15) * 9/5 + 32
-    return K_T_F
+def Kelvin_to_Fahrenkeit(kelvin):
+    kelvin = (fahrenheit - 273.15) * 9/5 + 32
+    return kelvin
 
 # introinteraktion med användaren
 time.sleep(1)
@@ -68,11 +68,10 @@ print("6. Kelvin till Fahrenheit")
 
 # Fråga 1 till användaren -- vilket val de vill göra
 print()
-val_1 = input("Vilken konvertering vill du göra? ")
+val = input("Vilken konvertering vill du göra? ")
 
-# Hantera användarens val
-if condition:
-    val = '1':
-        temp_celsius = float(input("Ange temperatur i Celsius: "))
-    resultat = C_T_F(temp_celsius)
-    print(f"Det motsvarar {resultat:.2f} Fahrenheit")
+# Hantera användarens val med if/elif/else
+if val == '1':
+    temp_celsius = float(input("Ange temperatur i Celsius: "))
+    resultat = celsius_to_fahrenheit(temp_celsius)
+    print (resultat)
