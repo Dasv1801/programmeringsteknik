@@ -72,5 +72,7 @@ val_1 = input("Vilken konvertering vill du göra? ")
 
 # Hantera användarens val
 if condition:
-    val = 1
-    
+    val = '1':
+        temp_celsius = float(input("Ange temperatur i Celsius: "))
+    resultat = C_T_F(temp_celsius)
+    print(f"Det motsvarar {resultat:.2f} Fahrenheit")
