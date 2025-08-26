@@ -40,20 +40,20 @@ def kelvin_to_celsius(kelvin):
     return kelvin
 
 # 5. Fahrenheit till Kelvin
-def Fahrenheit_to_Kelvin(fahrenheit):
-    fahrenheit = (kelvin - 32) * 5/9 + 273.15
-    return fahrenheit
+def fahrenheit_to_kelvin(fahrenheit):
+    kelvin = (fahrenheit - 32) * 5/9 + 273.15
+    return kelvin
 
 # 6. Kelvin till Fahrenheit
-def Kelvin_to_Fahrenkeit(kelvin):
-    kelvin = (fahrenheit - 273.15) * 9/5 + 32
-    return kelvin
+def kelvin_to_fahrenkeit(kelvin):
+    fahrenheit = (kelvin * 1.8) - 459.67
+    return fahrenheit
 
 # introinteraktion med användaren
 time.sleep(1)
 print()
 print ("Välkommen till Temperaturkonverteraren, vilken av följande konverteringar vill du göra?")
-time.sleep(6)
+time.sleep(1)
 print("1. Celsius till Fahrenheit")
 time.sleep(1)
 print("2. Fahrenheit till Celsius")
@@ -87,4 +87,14 @@ elif val == '3':
 elif val == '4':
     temp_kelvin = float(input("Ange temperatur i Celcius: "))
     resultat = celsius_to_kelvin(temp_kelvin)
-    print (resultat) + print("Kelvin")
+    print (resultat)
+elif val =='5':
+    temp_fahrenheit = float(input("Ange temperatur i Farenheit: "))
+    resultat = fahrenheit_to_kelvin(temp_fahrenheit)
+    print (resultat)
+elif val == '6':
+    temp_kelvin = float(input("Ange temperatur i Kelvin: "))
+    resultat = kelvin_to_fahrenkeit(temp_kelvin)
+    print (resultat)
+else:
+    print("Ogiltigt val!")
