@@ -2,14 +2,14 @@
 import time
 
 # laboration 1 (konvertera.py):
-def fahrenheit_to_celsius(t):
-    t_celsius = (t - 32) * 5/9
-    return t_celsius
+#def fahrenheit_to_celsius(t):
+#    t_celsius = (t - 32) * 5/9
+#    return t_celsius
 
-svar = input('Ange en temperatur i Fahrenheit: ')
-t_fahrenheit = float(svar)
-t = fahrenheit_to_celsius(t_fahrenheit)
-print("Celcius: ", t)
+#svar = input('Ange en temperatur i Fahrenheit: ')
+#t_fahrenheit = float(svar)
+#t = fahrenheit_to_celsius(t_fahrenheit)
+#print("Celcius: ", t)
 
 # Temperaturkonverteraren
 # 1. Celsius till Fahrenheit
@@ -41,7 +41,8 @@ def kelvin_to_celsius(kelvin):
 
 # 5. Fahrenheit till Kelvin
 def fahrenheit_to_kelvin(fahrenheit):
-    kelvin = (fahrenheit - 32) * 5/9 + 273.15
+    celsius = fahrenheit_to_celsius(fahrenheit)
+    kelvin = celsius + 273.15
     return kelvin
 
 # 6. Kelvin till Fahrenheit
@@ -51,7 +52,7 @@ def kelvin_to_fahrenkeit(kelvin):
 
 # introinteraktion med användaren
 time.sleep(1)
-print()
+#print()
 print ("Välkommen till Temperaturkonverteraren, vilken av följande konverteringar vill du göra?")
 time.sleep(1)
 print("1. Celsius till Fahrenheit")
@@ -65,13 +66,15 @@ time.sleep(1)
 print("5. Fahrenheit till Kelvin")
 time.sleep(1)
 print("6. Kelvin till Fahrenheit")
+time.sleep(2)
+print("or 666?")
 
 # Fråga 1 till användaren -- vilket val de vill göra
 time.sleep(1)
 print()
 val = input("Vilken konvertering vill du göra?")
 
-# Hantera användarens val med if/elif/else
+# Hantera användarens val med if,elif,else
 if val == '1':
     temp_celsius = float(input("Ange temperatur i Celsius: "))
     resultat = celsius_to_fahrenheit(temp_celsius)
@@ -96,5 +99,9 @@ elif val == '6':
     temp_kelvin = float(input("Ange temperatur i Kelvin: "))
     resultat = kelvin_to_fahrenkeit(temp_kelvin)
     print (resultat)
+elif val == '666':
+    print ("SATAN! Death is upon us all soon!...")
+    time.sleep(3)
+    print ("... Ne bara skoja! ;)")
 else:
     print("Ogiltigt val!")
