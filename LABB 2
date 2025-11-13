@@ -1,1 +1,23 @@
+# Uppgift 2.5.1 a)
+def int_to_hexa_char(tal):
+    hexa_chars = "0123456789ABCDEF"
+    return hexa_chars[tal]
+
+print("Uppgift 2.5.1b:")
+
+# Test printar för läsaren och användaren av koden. 
+print(int_to_hexa_char(13))  
+print(int_to_hexa_char(4))   # Skall ge "D" och "4"
+
+# Uppgift 2.5.1 b)
+def hexa_char_to_int(symbol):
+    hexa_chars = "0123456789ABCDEF"
+    return hexa_chars.index(symbol)
+
+print()
+print("Uppgift 2.5.1b:")
+
+# Test printar för läsaren och användaren av koden.
+print((hexa_char_to_int("5")))
+print((hexa_char_to_int("D"))) # Skall ge 5 och 13
 
