@@ -8,9 +8,22 @@ def hexa_char_to_int(symbol):
     hexa_chars = "0123456789ABCDEF"
     return hexa_chars.find(symbol)
 
-# kod som provtestar att "def" ovanför fungerar.
+# Kod som provtestar att "def" ovanför fungerar.
 print(int_to_hexa_char(13))
 print(int_to_hexa_char(4))
-
 print(hexa_char_to_int("5"))
 print(hexa_char_to_int("D"))
+
+# Uppgift 2a
+def decimal_to_hexa(dec_tal):
+    if dec_tal == 0:
+        return "0"
+    hex_resultat = ""
+    t = dec_tal
+    while t > 0:
+        rest = t % 16
+        kvot = t // 16
+        char = int_to_hexa_char(rest)
+        hex_resultat = char + hex_resultat
+        t = kvot
+    return hex_resultat
